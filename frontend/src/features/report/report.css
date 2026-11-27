@@ -1,0 +1,497 @@
+/* =========================================================================
+   تنسيقات موديول التقييم والمذاكرة (عضو 6 — frontend/src/features/report/)
+   معزولة ببادئة rp- لضمان عدم التعارض مع أي ستايل لباقي أعضاء الفريق
+   ========================================================================= */
+
+.rp-stack-lg {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.rp-stack-md {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.rp-stack-sm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rp-row-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.rp-between {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.rp-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+
+.rp-hero-dark {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #064e3b 100%);
+  color: #f8fafc;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 16px 36px -14px rgba(15, 23, 42, 0.35);
+}
+
+.rp-hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .rp-hero-grid,
+  .rp-report-top-grid,
+  .rp-two-col,
+  .rp-study-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.rp-report-top-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.rp-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.rp-study-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.rp-h1 {
+  margin: 6px 0;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.rp-h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.rp-h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.rp-muted {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.rp-muted-xs {
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.rp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.rp-badge-neutral {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.rp-badge-emerald {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.rp-badge-amber {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.rp-badge-rose {
+  background: #fff1f2;
+  color: #be123c;
+  border: 1px solid #fecdd3;
+}
+
+.rp-badge-indigo {
+  background: #eef2ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+}
+
+.rp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  transition: all 0.16s ease;
+}
+
+.rp-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.rp-btn-primary {
+  background: #059669;
+  color: #ffffff;
+}
+
+.rp-btn-primary:hover:not(:disabled) {
+  background: #047857;
+}
+
+.rp-btn-dark {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.rp-btn-dark:hover:not(:disabled) {
+  background: #1e293b;
+}
+
+.rp-btn-outline {
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.rp-btn-outline:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.rp-btn-sm {
+  padding: 7px 13px;
+  font-size: 12px;
+  border-radius: 9px;
+}
+
+.rp-ring-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rp-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+}
+
+.rp-kpi-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rp-kpi-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.rp-kpi-value {
+  font-size: 22px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.rp-kpi-note {
+  font-size: 11.5px;
+  color: #64748b;
+}
+
+.rp-progress-track {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.rp-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.rp-fill-emerald {
+  background: #10b981;
+}
+
+.rp-fill-amber {
+  background: #f59e0b;
+}
+
+.rp-fill-rose {
+  background: #f43f5e;
+}
+
+.rp-fill-indigo {
+  background: #6366f1;
+}
+
+.rp-text-emerald {
+  color: #047857;
+}
+
+.rp-text-indigo {
+  color: #4338ca;
+}
+
+.rp-text-rose {
+  color: #be123c;
+}
+
+.rp-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.rp-item-emerald {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.rp-item-rose {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.rp-item-amber {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.rp-q-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.rp-q-header {
+  background: #f8fafc;
+  padding: 18px 22px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.rp-q-num {
+  background: #0f172a;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 7px;
+}
+
+.rp-score-box {
+  min-width: 92px;
+  padding: 8px 14px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.rp-score-big {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.rp-q-body {
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rp-answer-quote {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 14px;
+}
+
+.rp-behavior-row {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.rp-behavior-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 13.5px;
+}
+
+.rp-bars-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 650px) {
+  .rp-bars-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rp-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.rp-input,
+.rp-select,
+.rp-textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 11px;
+  padding: 10px 13px;
+  font-size: 14px;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.rp-input:focus,
+.rp-select:focus,
+.rp-textarea:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.14);
+}
+
+.rp-code-dark {
+  background: #090d16;
+  color: #6ee7b7;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12.5px;
+  direction: ltr;
+  text-align: left;
+  border-radius: 14px;
+  padding: 16px;
+  overflow: auto;
+  border: 1px solid #334155;
+}
+
+.rp-weak-tab {
+  width: 100%;
+  text-align: right;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rp-weak-tab.active {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.16);
+}
+
+.rp-resource-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.rp-resource-item.done {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.rp-improvement-banner {
+  background: linear-gradient(90deg, #047857, #059669);
+  color: #ffffff;
+  padding: 18px 22px;
+  border-radius: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}

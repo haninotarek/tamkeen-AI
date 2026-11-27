@@ -1,0 +1,357 @@
+{
+  "reports": [
+    {
+      "id": "rep_fawry_01",
+      "interviewId": "intv_fawry_01",
+      "candidateName": "كريم طارق (Fresh Graduate)",
+      "createdAt": "2026-11-26T10:30:00.000Z",
+      "attemptNumber": 1,
+      "mode": "full",
+      "evaluationEngineUsed": "smart-dynamic",
+      "behaviorDataSource": "member5",
+      "jobContext": {
+        "jobId": "job_fawry_fe",
+        "companyName": "فوري (Fawry)",
+        "jobTitle": "Frontend Developer (React)",
+        "jobLevel": "Fresh Graduate",
+        "jobDescription": "تطوير واجهات منصات الدفع الإلكتروني عالية الأداء باستخدام React و JavaScript الحديثة، مع التركيز على سرعة التحميل، أمان الجلسات (JWT/Auth)، والتعاون داخل فرق Agile."
+      },
+      "overallScore100": 61,
+      "averageScore10": 6.0,
+      "stars": 3.0,
+      "readinessVerdict": "needs_study",
+      "readinessLabel": "محتاج مذاكرة نقاط الضعف وإعادة الإنترفيو",
+      "executiveSummary": "أظهرت حضوراً ممتازاً في التعريف بنفسك وفهماً قوياً لأساسيات ربط الواجهات بالـ APIs، لكن ظهرت 3 نقاط ضعف مؤثرة في تحسين أداء React، وأمان تخزين التوكنات (JWT)، وهيكلة الإجابات السلوكية بطريقة STAR. ذاكر المصادر المخصصة بالأسفل ثم أعد الإنترفيو على هذه النقاط الـ 3 فقط.",
+      "categoryScores": {
+        "hr": 85,
+        "behavioral": 50,
+        "technical": 55,
+        "behaviorConfidence": 67
+      },
+      "strengths": [
+        {
+          "id": "str_1",
+          "title": "تقديم ذاتي احترافي وربط واضح بمنتجات شركة فوري",
+          "category": "HR",
+          "description": "ربطت مشروع تخرجك بقطاع المدفوعات الرقمية (FinTech) وأظهرت حماساً ومعرفة بحجم معاملات فوري.",
+          "scoreHighlight": "8.5 / 10"
+        },
+        {
+          "id": "str_2",
+          "title": "فهم ممتاز للتعامل مع Async/Await ومعالجة أخطاء الشبكة",
+          "category": "Technical",
+          "description": "شرحت بدقة حالات Loading و Error و Retry عند التعامل مع طلبات الدفع.",
+          "scoreHighlight": "8.0 / 10"
+        },
+        {
+          "id": "str_3",
+          "title": "تواصل بصري جيد وثبات في الأسئلة الافتتاحية",
+          "category": "Behavior",
+          "description": "سجلت مؤشرات السلوك (عضو 5) تواصل عين بنسبة 84% ومعدل كلام متزن في بداية ونهاية المقابلة.",
+          "scoreHighlight": "84% تواصل بصري"
+        }
+      ],
+      "weaknesses": [
+        {
+          "id": "weak_react_perf",
+          "topic": "تحسين أداء React ومنع الـ Re-rendering غير الضروري",
+          "category": "Technical",
+          "severity": "عالية",
+          "relatedQuestionId": "qeval_2",
+          "originalScore10": 4.0,
+          "diagnosis": "حصلت على (4/10) لأن الإجابة اكتفت بذكر أن React سريعة بسبب الـ Virtual DOM، ولم توضح أدوات المعالجة الفعلية مثل React.memo و useMemo و useCallback و Virtualization للقوائم الكبيرة.",
+          "studySummary": "إعادة الريندر (Re-rendering) في React تحدث عند تغيّر الـ State أو الـ Props للمكوّن الأب. نستخدم React.memo لمنع ريندر المكوّن الفرعي إذا لم تتغير مدخلاته، وuseMemo لحفظ نتيجة عملية حسابية مكلفة، وuseCallback لتثبيت مرجع الدالة عند تمريرها كـ Prop — مع القياس أولاً بأداة React DevTools Profiler.",
+          "isMastered": false,
+          "resources": [
+            {
+              "id": "res_rp_1",
+              "title": "التوثيق الرسمي لـ React: شرح useMemo ومتى نستخدمه فعلياً",
+              "type": "docs",
+              "typeLabel": "توثيق رسمي",
+              "provider": "React.dev",
+              "url": "https://react.dev/reference/react/useMemo",
+              "estimatedMinutes": 15,
+              "whyRecommended": "يشرح بالأمثلة الفرق بين الحسابات المكلفة والحسابات العادية وكيف تتجنب إعادة الرسم.",
+              "completed": true
+            },
+            {
+              "id": "res_rp_2",
+              "title": "شرح React.memo vs useMemo vs useCallback بالعربي",
+              "type": "video",
+              "typeLabel": "فيديو شرح",
+              "provider": "YouTube بالعربي",
+              "url": "https://www.youtube.com/results?search_query=React+memo+useMemo+useCallback+شرح+بالعربي",
+              "estimatedMinutes": 20,
+              "whyRecommended": "تطبيق عملي أمامك في الكود يوضح متى يعيد الـ Child Component رسم نفسه وكيف نوقفه.",
+              "completed": false
+            },
+            {
+              "id": "res_rp_3",
+              "title": "دليل تحسين أداء القوائم الضخمة (List Virtualization)",
+              "type": "guide",
+              "typeLabel": "دليل تطبيقي",
+              "provider": "web.dev by Google",
+              "url": "https://web.dev/articles/virtualize-long-lists-react-window",
+              "estimatedMinutes": 12,
+              "whyRecommended": "مهم جداً لتطبيقات FinTech مثل فوري التي تعرض آلاف المعاملات في جداول حية.",
+              "completed": false
+            }
+          ],
+          "practiceQuestions": [
+            {
+              "id": "pq_rp_1",
+              "question": "لو عندك جدول معاملات مالية فيه 5000 عملية وفلتر بحث بطيء في React، إيه الـ 3 خطوات اللي هتعملها بالترتيب لتحسين الأداء؟",
+              "difficulty": "متوسط",
+              "hint": "فكّر في Debouncing لمدخل البحث، وuseMemo للفلترة، وVirtualization للجدول.",
+              "expectedKeyPoints": [
+                "استخدام Debounce أو useDeferredValue لتأخير الفلترة أثناء الكتابة",
+                "حفظ ناتج الفلترة الثقيلة داخل useMemo",
+                "استخدام List Virtualization لعرض الصفوف الظاهرة فقط"
+              ],
+              "sampleAnswer": "أولاً أضيف Debounce على حقل البحث حتى لا نفلتر مع كل حرف. ثانياً أستخدم useMemo لحساب المصفوفة المفلترة عند تغير نص البحث أو البيانات فقط. ثالثاً أطبّق List Virtualization بمكتبة مثل react-window لرسم الصفوف المرئية فقط في الـ DOM."
+            },
+            {
+              "id": "pq_rp_2",
+              "question": "ليه تمرير دالة عادية (Arrow Function) كـ Prop لمكوّن فرعي مغلف بـ React.memo بيخليه يعمل Re-render برضه؟ وإزاي نحلها؟",
+              "difficulty": "سهل",
+              "hint": "تذكر أن الدوال في JavaScript تُقارن بالمرجع (Reference Equality).",
+              "expectedKeyPoints": [
+                "في كل Render للمكوّن الأب يتم إنشاء مرجع جديد للدالة في الذاكرة",
+                "React.memo يقارن الـ Props فيعتبرها تغيرت",
+                "الحل هو تغليف الدالة بـ useCallback لتثبيت مرجعها"
+              ],
+              "sampleAnswer": "لأنه في كل مرة يعيد فيها المكوّن الأب رسم نفسه يتم إنشاء نسخة مرجعية جديدة من الدالة في الذاكرة، وعندما يقارن React.memo الـ Props يجد المرجع مختلفاً فيعيد الرسم. نحل ذلك بتغليف الدالة بـ useCallback."
+            }
+          ]
+        },
+        {
+          "id": "weak_api_jwt",
+          "topic": "أمان جلسات المستخدمين (JWT Security) وأكواد HTTP 401/403",
+          "category": "Technical",
+          "severity": "عالية",
+          "relatedQuestionId": "qeval_4",
+          "originalScore10": 4.5,
+          "diagnosis": "حصلت على (4.5/10) بسبب اقتراح تخزين التوكن في localStorage (وهو خطر أمني كبير في تطبيقات الدفع بسبب هجمات XSS)، والخلط بين معنى 401 و 403.",
+          "studySummary": "الفرق الجوهري: كود 401 Unauthorized يعني فشل التحقق من الهوية (لم تسجل الدخول أو انتهت صلاحية التوكن)، بينما 403 Forbidden يعني هويتك معروفة لكن لا تملك صلاحية لهذا المورد. ولحماية التوكن في المتصفح نتجنب localStorage تماماً ونستخدم HttpOnly + Secure + SameSite Cookies.",
+          "isMastered": false,
+          "resources": [
+            {
+              "id": "res_jwt_1",
+              "title": "دليل MDN الرسمي لأكواد حالة HTTP والفرق بين 401 و 403",
+              "type": "docs",
+              "typeLabel": "توثيق رسمي",
+              "provider": "MDN Web Docs",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401",
+              "estimatedMinutes": 10,
+              "whyRecommended": "يمنحك التعريف الهندسي الدقيق الذي يتوقعه المحاور التقني.",
+              "completed": false
+            },
+            {
+              "id": "res_jwt_2",
+              "title": "أين نخزن الـ JWT بأمان؟ HttpOnly Cookies vs localStorage",
+              "type": "video",
+              "typeLabel": "فيديو شرح",
+              "provider": "YouTube بالعربي",
+              "url": "https://www.youtube.com/results?search_query=JWT+localStorage+vs+HttpOnly+Cookie+شرح+بالعربي",
+              "estimatedMinutes": 16,
+              "whyRecommended": "حاسم جداً لمقابلات شركات المدفوعات والبنوك مثل فوري لأن الأمان أولوية قصوى.",
+              "completed": false
+            }
+          ],
+          "practiceQuestions": [
+            {
+              "id": "pq_jwt_1",
+              "question": "اشرح الفرق بين 401 و 403 بمثال من لوحة تحكم شركة مدفوعات، وفين تخزن التوكنات في المتصفح؟",
+              "difficulty": "سهل",
+              "hint": "قارن بين موظف انتهت جلسته، وموظف خدمة عملاء يحاول فتح إعدادات الخزنة.",
+              "expectedKeyPoints": [
+                "401 عند عدم وجود جلسة صالحة أو انتهاء التوكن (Authentication)",
+                "403 عند محاولة مستخدم مسجل الوصول لصفحة أعلى من صلاحياته (Authorization)",
+                "استخدام HttpOnly Secure Cookie بدلاً من localStorage لمنع سرقة التوكن عبر XSS"
+              ],
+              "sampleAnswer": "لو فتح المستخدم لوحة التحكم بعد انتهاء جلسته يرجع السيرفر 401 ليطلب تسجيل الدخول مجدداً، أما لو حاول موظف عادي فتح إعدادات الأدمن المالية يرجع 403 لأنه لا يملك الصلاحية. ونخزن الـ Refresh Token في HttpOnly Secure Cookie لحمايته من هجمات XSS."
+            }
+          ]
+        },
+        {
+          "id": "weak_star_behavior",
+          "topic": "هيكلة الأسئلة السلوكية بمنهجية STAR (إدارة ضغط الوقت والخلافات)",
+          "category": "Behavioral",
+          "severity": "متوسطة",
+          "relatedQuestionId": "qeval_3",
+          "originalScore10": 5.0,
+          "diagnosis": "حصلت على (5/10) لأن الإجابة كانت عامة ونظرية بدون ذكر موقف حقيقي محدد ودورك الفعلي والنتيجة النهائية.",
+          "studySummary": "المحاور في الأسئلة السلوكية يبحث عن قصة حقيقية محددة من 4 أركان (STAR): الموقف (Situation)، المهمة (Task)، الخطوات التي قمت أنت شخصياً بتنفيذها (Action)، والنتيجة الملموسة (Result).",
+          "isMastered": false,
+          "resources": [
+            {
+              "id": "res_star_1",
+              "title": "دليل جامعة MIT لتطبيق طريقة STAR في المقابلات السلوكية",
+              "type": "guide",
+              "typeLabel": "دليل تطبيقي",
+              "provider": "MIT Career Services",
+              "url": "https://capd.mit.edu/resources/the-star-method-for-behavioral-interviews/",
+              "estimatedMinutes": 10,
+              "whyRecommended": "يعلّمك كيف تصيغ قصة من مشروع التخرج في 90 ثانية مقنعة.",
+              "completed": false
+            }
+          ],
+          "practiceQuestions": [
+            {
+              "id": "pq_star_1",
+              "question": "احكي عن موقف حقيقي في مشروع التخرج أو تدريب حصل فيه ضيق وقت أو تعارض في الآراء، إيه كان دورك وإيه النتيجة؟",
+              "difficulty": "متوسط",
+              "hint": "اذكر اسم المشروع، المشكلة في جملة، خطوات نفذتها بنفسك، والنتيجة بالأرقام.",
+              "expectedKeyPoints": [
+                "تحديد مشروع وموقف واقعي واضح (Situation & Task)",
+                "توضيح الإجراء الشخصي لحل الخلاف أو جدولة المهام الحرجة (Action)",
+                "ذكر النتيجة النهائية الإيجابية (Result)"
+              ],
+              "sampleAnswer": "في مشروع التخرج تعطل ربط بوابة الدفع التجريبية قبل المناقشة بـ 3 أيام (Situation/Task). راجعت سجل الأخطاء وعزلت المشكلة في إعدادات الـ Webhook وجهزت خطة بديلة بالتوازي مع زميلي (Action)، فنجحنا في إصلاح الربط خلال 6 ساعات وسلمنا المشروع بتقدير امتياز (Result)."
+            }
+          ]
+        }
+      ],
+      "questionEvaluations": [
+        {
+          "id": "qeval_1",
+          "questionIndex": 1,
+          "category": "HR",
+          "topic": "التعريف بالنفس والدافع للانضمام لشركة فوري",
+          "question": "عرفنا بنفسك باختصار، وقولنا ليه اخترت تقدم على وظيفة Frontend Developer في فوري تحديداً؟",
+          "userAnswer": "أنا كريم طارق، خريج حاسبات ومعلومات، ركزت آخر سنتين على تطوير الواجهات بـ React و TypeScript، ومشروع تخرجي كان محفظة مالية مصغرة للطلاب. اخترت فوري لأنها أكبر شبكة مدفوعات رقمية في مصر وبتتعامل مع ملايين المستخدمين يومياً.",
+          "scoreOutOf10": 8.5,
+          "verdict": "ممتاز",
+          "reason": "إجابة افتتاحية ممتازة (8.5/10)؛ جمعت بذكاء بين خلفيتك التقنية، مشروع التخرج المرتبط بالـ FinTech، ومعرفتك بحجم عمل شركة فوري.",
+          "goodPoints": [
+            "ربط مباشر وذكي بين مشروع التخرج وطبيعة عمل الشركة في المدفوعات",
+            "تحديد التقنيات المتقنة بوضوح واختصار"
+          ],
+          "missingPoints": [
+            "يمكن ذكر رقم سريع عن مشروع التخرج مثل نسبة تحسين سرعة المعاملة"
+          ],
+          "modelAnswer": "أنا خريج علوم حاسب متخصص في تطوير الواجهات بـ React و TypeScript. بنيت في مشروع تخرجي منصة محفظة إلكترونية حسّنت سرعة إتمام المعاملة بنسبة 35%، وأطمح للانضمام لفوري لبناء واجهات مالية موثوقة تخدم ملايين المستخدمين.",
+          "behaviorMetrics": {
+            "stressLevel": 24,
+            "focusLevel": 88,
+            "confidenceLevel": 86,
+            "eyeContactPercent": 85,
+            "wordsPerMinute": 128,
+            "fillerWordsCount": 1,
+            "dominantExpression": "واثق ومبتسم",
+            "isProvidedByMember5": true
+          }
+        },
+        {
+          "id": "qeval_2",
+          "questionIndex": 2,
+          "category": "Technical",
+          "topic": "تحسين أداء React ومنع الـ Re-rendering غير الضروري",
+          "question": "في لوحات تحكم التجار عندنا جداول فيها آلاف العمليات الحية؛ إزاي بتشخص وتعالج مشكلة البطء وإعادة الـ Re-rendering المتكررة في React؟",
+          "userAnswer": "React أصلاً سريعة لأنها بتستخدم الـ Virtual DOM، ولو الصفحة بطيئة ممكن أقسم الصفحة لـ Components أصغر.",
+          "scoreOutOf10": 4.0,
+          "verdict": "ضعيف",
+          "reason": "الإجابة سطحية وغير كافية (4/10)؛ تقسيم الـ Components وحده لا يمنع إعادة الريندر في React، وغاب عن الإجابة ذكر أدوات القياس (Profiler) وتقنيات Memoization والـ Virtualization.",
+          "goodPoints": ["الإشارة لفكرة تقسيم المكونات لتسهيل العزل"],
+          "missingPoints": [
+            "استخدام React DevTools Profiler لتحديد سبب الريندر الفعلي",
+            "شرح دور React.memo و useMemo و useCallback",
+            "ذكر List Virtualization للجداول الضخمة"
+          ],
+          "modelAnswer": "أبدأ بتشخيص البطء بـ React DevTools Profiler، ثم أعزل الـ State المتغيرة في أصغر مكوّن، وأستخدم React.memo مع useCallback/useMemo لمنع إعادة رسم الصفوف الثابتة، وأطبق List Virtualization لعرض الصفوف المرئية فقط.",
+          "behaviorMetrics": {
+            "stressLevel": 68,
+            "focusLevel": 62,
+            "confidenceLevel": 48,
+            "eyeContactPercent": 54,
+            "wordsPerMinute": 98,
+            "fillerWordsCount": 8,
+            "dominantExpression": "متردد / متوتر",
+            "isProvidedByMember5": true
+          }
+        },
+        {
+          "id": "qeval_3",
+          "questionIndex": 3,
+          "category": "Behavioral",
+          "topic": "هيكلة الأسئلة السلوكية بمنهجية STAR (إدارة ضغط الوقت والخلافات)",
+          "question": "احكيلي عن موقف واجهت فيه ضغط تسليم شديد أو اختلاف في وجهات النظر التقنية مع زميلك في التيم، وإزاي اتصرفت؟",
+          "userAnswer": "أكيد في الشغل الجماعي بيحصل اختلافات وضغط وقت، أنا دايماً بحب أسمع آراء كل الناس في التيم ونتفاهم بهدوء ونقسم الشغل بينا بالتساوي.",
+          "scoreOutOf10": 5.0,
+          "verdict": "متوسط",
+          "reason": "الإجابة عامة ونظرية (5/10)؛ السؤال طلب موقفاً حقيقياً حدث بالفعل، لكنك أجبت بكلام عام دون تطبيق منهجية STAR.",
+          "goodPoints": ["إظهار روح تعاونية وإيجابية تجاه العمل الجماعي"],
+          "missingPoints": [
+            "ذكر واقعة حقيقية محددة من مشروع سابق أو تدريب",
+            "توضيح الخطوات العملية التي قمت أنت بها والنتيجة النهائية"
+          ],
+          "modelAnswer": "في مشروع التخرج قبل التسليم بـ 4 أيام اختلفنا حول مكتبة إدارة الحالة بينما تأخرت شاشة التقارير (Situation/Task). اقترحت تثبيت الحل الأبسط وأعدت توزيع المهام الحرجة في اجتماع يومي قصير (Action)، فنجحنا في تسليم المشروع قبل الموعد بيوم كامل بدون أخطاء (Result).",
+          "behaviorMetrics": {
+            "stressLevel": 49,
+            "focusLevel": 71,
+            "confidenceLevel": 63,
+            "eyeContactPercent": 68,
+            "wordsPerMinute": 118,
+            "fillerWordsCount": 5,
+            "dominantExpression": "تركيز متوسط",
+            "isProvidedByMember5": true
+          }
+        },
+        {
+          "id": "qeval_4",
+          "questionIndex": 4,
+          "category": "Technical",
+          "topic": "أمان جلسات المستخدمين (JWT Security) وأكواد HTTP 401/403",
+          "question": "بما إننا شركة مدفوعات، إيه الفرق بين كود الاستجابة 401 و 403؟ وفين بتخزن الـ JWT في المتصفح عشان تحميه من السرقة؟",
+          "userAnswer": "الاتنين بيظهروا لما المستخدم ميكونش مسموحله يدخل الصفحة، والـ JWT بخزنه عادةً في الـ localStorage وببعته في الـ Header.",
+          "scoreOutOf10": 4.5,
+          "verdict": "ضعيف",
+          "reason": "الإجابة تحتوي على ثغرة أمنية حرجة لتطبيقات المدفوعات (4.5/10)؛ تخزين التوكن الحساس في localStorage يجعله مكشوفاً لهجمات XSS، والتفرقة بين 401 و403 غير دقيقة.",
+          "goodPoints": ["معرفة طريقة إرسال الـ Access Token في ترويسة الطلب"],
+          "missingPoints": [
+            "التفريق الدقيق بين Authentication (401) و Authorization (403)",
+            "استخدام HttpOnly + Secure + SameSite Cookies بدلاً من localStorage"
+          ],
+          "modelAnswer": "401 تعني هوية غير موثقة (انتهاء أو غياب التوكن)، بينما 403 تعني هوية معروفة بلا صلاحية كافية. وللأمان نخزن الـ Refresh Token في HttpOnly Secure Cookie لمنع سرقته عبر XSS.",
+          "behaviorMetrics": {
+            "stressLevel": 64,
+            "focusLevel": 65,
+            "confidenceLevel": 52,
+            "eyeContactPercent": 59,
+            "wordsPerMinute": 105,
+            "fillerWordsCount": 6,
+            "dominantExpression": "متردد",
+            "isProvidedByMember5": true
+          }
+        },
+        {
+          "id": "qeval_5",
+          "questionIndex": 5,
+          "category": "Technical",
+          "topic": "التعامل مع Async/Await ومعالجة أخطاء الشبكة",
+          "question": "إزاي بتتعامل مع حالات التحميل وفشل الشبكة عند تنفيذ عملية دفع في الواجهة الأمامية؟",
+          "userAnswer": "بعطل زرار الدفع أول ما المستخدم يضغط عشان ميحصلش الدفع مرتين (Idempotency / Double Click Prevention)، وبعرض حالة Loading واضحة، وفي بلوك catch بعرض رسالة خطأ مفهومة مع إمكانية إعادة المحاولة بأمان.",
+          "scoreOutOf10": 8.0,
+          "verdict": "جيد جداً",
+          "reason": "إجابة عملية ممتازة (8/10)؛ انتبهت لنقطة حرجة في المدفوعات وهي منع الضغط المزدوج أثناء انتظار الرد مع معالجة واضحة للأخطاء.",
+          "goodPoints": [
+            "الانتباه لمنع تكرار عملية الدفع عند الضغط المتكرر",
+            "إدارة حالات Loading و Error بوضوح"
+          ],
+          "missingPoints": ["يمكن الإشارة لإرسال مفتاح Idempotency-Key مع الطلب للسيرفر"],
+          "modelAnswer": "أعطّل زر الإرسال فور الضغط مع إرفاق Idempotency-Key لمنع خصم المبلغ مرتين، وأدير حالات التحميل والخطأ بوضوح للمستخدم مع آلية Retry آمنة عند انقطاع الشبكة.",
+          "behaviorMetrics": {
+            "stressLevel": 28,
+            "focusLevel": 89,
+            "confidenceLevel": 84,
+            "eyeContactPercent": 83,
+            "wordsPerMinute": 134,
+            "fillerWordsCount": 2,
+            "dominantExpression": "واثق وهادئ",
+            "isProvidedByMember5": true
+          }
+        }
+      ]
+    }
+  ]
+}
